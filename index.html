@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <title>Tank Warfare: Neon Era</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Loaded Fonts: Orbitron (Headers), Rajdhani (UI/Body), Kanit (Thai), Noto Sans JP (Japanese) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* CHANGED: Prioritize Kanit for better readability while keeping the modern look */
+        --font-body: 'Kanit', 'Rajdhani', 'Noto Sans JP', sans-serif;
+        --font-display: 'Orbitron', 'Kanit', 'Noto Sans JP', sans-serif;
+      }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #1a1a1a;
+        font-family: var(--font-body);
+        user-select: none;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        touch-action: none;
+      }
+
+      /* Override Tailwind's arbitrary value generation to inject our i18n font stack */
+      .font-\[Orbitron\] {
+        font-family: var(--font-display) !important;
+      }
+      
+      .font-\[Rajdhani\] {
+        font-family: var(--font-body) !important;
+      }
+
+      canvas {
+        display: block;
+        touch-action: none;
+      }
+      /* Custom Scrollbar for non-game UI */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #444;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00bcd4;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "uuid": "https://esm.sh/uuid@^13.0.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "socket.io-client": "https://esm.sh/socket.io-client@4.8.2",
+    "behavior3js": "https://esm.sh/behavior3js@0.2.2",
+    "i18next": "https://esm.sh/i18next@23.12.2",
+    "react-i18next": "https://esm.sh/react-i18next@14.1.2",
+    "i18next-browser-languagedetector": "https://esm.sh/i18next-browser-languagedetector@8.0.0",
+    "zustand": "https://esm.sh/zustand@5.0.0",
+    "zustand/vanilla": "https://esm.sh/zustand@5.0.0/vanilla",
+    "lodash-es": "https://esm.sh/lodash-es@4.17.21",
+    "tone": "https://esm.sh/tone@14.7.77",
+    "peerjs": "https://esm.sh/peerjs@1.5.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

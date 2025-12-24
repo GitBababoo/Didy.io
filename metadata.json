@@ -1,0 +1,5 @@
+{
+  "name": "Tank Warfare: Neon Era",
+  "description": "A high-performance, multiplayer-ready tank battle game inspired by Diep.io. Features a custom engine with Spatial Hashing, Object Pooling, Pseudo-3D graphics, and Chromatic Aberration effects.",
+  "requestFramePermissions": []
+}
